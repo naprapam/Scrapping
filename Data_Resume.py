@@ -26,7 +26,7 @@ co = cohere.Client(api_key)
 Berita = read_csv('Kompas_thn_Judul+Link1.csv')
 alamat = Berita['Link']
 
-for i in range(1,len(Berita):
+for i in range(1,len(Berita)):
     res = req.get(alamat[i])
     sop = bs(res.text, "html.parser")
     isi = sop.find('div', class_='read__content')
